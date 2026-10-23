@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Nube | Un momento para ti</title>
+  <meta name="description" content="Descubre Café Nube, café, bebidas y postres para disfrutar sin prisa.">
+  <style>
+    :root {
+      --crema: #f8f3e9;
+      --cafe: #49352a;
+      --verde: #62745a;
+      --blanco: #fffdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--crema);
+      color: var(--cafe);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      background: var(--blanco);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--cafe);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      padding: 65px 7%;
+      text-align: center;
+      background: #e7dfcf;
+    }
+
+    .etiqueta {
+      color: var(--verde);
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      line-height: 1.1;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      max-width: 480px;
+      margin: 0 auto 25px;
+    }
+
+    .boton {
+      display: inline-block;
+      background: var(--verde);
+      color: white;
+      padding: 13px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 55px 7%;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .titulo h2 {
+      font-family: Georgia, serif;
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .producto {
+      background: var(--blanco);
+      border-radius: 16px;
+      overflow: hidden;
+      padding-bottom: 18px;
+    }
+
+    .producto img {
+      display: block;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #e7dfcf;
+    }
+
+    .producto h3,
+    .producto p,
+    .precio {
+      margin: 10px 18px 0;
+    }
+
+    .producto p {
+      font-size: 0.9rem;
+    }
+
+    .precio {
+      color: var(--verde);
+      font-weight: bold;
+    }
+
+    .nosotros {
+      background: var(--blanco);
+      text-align: center;
+    }
+
+    .nosotros p {
+      max-width: 600px;
+      margin: 12px auto;
+    }
+
+    .contacto {
+      text-align: center;
+    }
+
+    footer {
+      background: var(--cafe);
+      color: white;
+      text-align: center;
+      padding: 22px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 50px 6%;
+      }
+
+      section {
+        padding: 42px 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">☕ Café Nube</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <span class="etiqueta">Tu pausa favorita</span>
+      <h1>Un momento<br>para ti.</h1>
+      <p>
+        Café recién preparado, postres deliciosos
+        y un espacio para disfrutar sin prisa.
+      </p>
+      <a class="boton" href="#menu">Descubrir el menú</a>
+    </section>
+
+    <section id="menu">
+      <div class="titulo">
+        <span class="etiqueta">Hecho con cariño</span>
+        <h2>Nuestros favoritos</h2>
+        <p>Sabores para acompañar tu día.</p>
+      </div>
+
+      <div class="productos">
+        <article class="producto">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80"
+            alt="Taza de café recién preparado">
+          <h3>Café de la casa</h3>
+          <p>Aromático, suave y recién preparado.</p>
+          <div class="precio">$45 MXN</div>
+        </article>
+
+        <article class="producto">
+          <img
+            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
+            alt="Café con leche servido en una taza">
+          <h3>Latte cremoso</h3>
+          <p>Espresso con leche espumosa.</p>
+          <div class="precio">$55 MXN</div>
+        </article>
+
+        <article class="producto">
+          <img
+            src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80"
+            alt="Postre dulce servido para acompañar el café">
+          <h3>Postre del día</h3>
+          <p>Un toque dulce para tu momento.</p>
+          <div class="precio">$50 MXN</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="nosotros" id="nosotros">
+      <span class="etiqueta">Nuestra esencia</span>
+      <h2>Más que una taza de café</h2>
+      <p>
+        Café Nube es una cafetería ficticia creada como
+        demostración de diseño web. Imagina un espacio
+        tranquilo, buenos sabores y atención cercana.
+      </p>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <span class="etiqueta">Nos encantaría conocerte</span>
+      <h2>Visítanos</h2>
+      <p>Ubicación de ejemplo: Centro, Tuxpan, Veracruz.</p>
+      <p>Horario de ejemplo: lunes a sábado, 8:00–20:00.</p>
+      <p style="margin: 18px 0;">
+        <a class="boton" href="mailto:hola@example.com">
+          Contacto de demostración
+        </a>
+      </p>
+      <p style="font-size: 0.8rem;">
+        Datos ficticios. No es un negocio real.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Café Nube · Proyecto de demostración
+  </footer>
+
+</body>
+</html>
